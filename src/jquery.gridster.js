@@ -181,7 +181,7 @@
 
         this.set_dom_grid_height();
 
-        return $w.fadeIn();
+        return $w.show(this.options.showEffect || this.options.effect);
     };
 
 
@@ -455,7 +455,7 @@
 
         this.remove_from_gridmap(wgd);
 
-        $el.fadeOut($.proxy(function() {
+        $el.hide(this.options.hideEffect || this.options.effect, $.proxy(function() {
             $el.remove();
 
             if (!silent) {
